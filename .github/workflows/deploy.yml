@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-  workflow_dispatch: # Allows manual deployment from GitHub Actions
+  workflow_dispatch:
 permissions:
   contents: write
 jobs:
@@ -19,10 +19,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build Angular app
-        run: npm run build -- --output-path=dist/asteroids --base-href="/asteroids/"
+        run: |
+          npm run build -- --output-path=dist/asteroids --base-href="/asteroids/"
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: dist/asteroids
           clean: true
+          single-commit: true
