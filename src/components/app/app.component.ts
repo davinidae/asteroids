@@ -10,5 +10,5 @@ import { HighscoresComponent } from '../highscores/highscores.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'asteroids-angular';
+  title = 'asteroids';
 }
