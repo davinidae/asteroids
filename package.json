@@ -1,33 +1,45 @@
 {
-  "name": "astroids-javascript",
-  "version": "1.0.0",
-  "description": "You can play the game here\r https://elpandafriki.github.io/Astroids-JavaScript/",
-  "homepage": "https://github.com/elPandaFriki/Astroids-JavaScript#readme",
-  "bugs": {
-    "url": "https://github.com/elPandaFriki/Astroids-JavaScript/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/elPandaFriki/Astroids-JavaScript.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "module",
-  "main": "index.js",
+  "name": "asteroids-angular",
+  "version": "0.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./scripts/open-browser.js && nodemon ./scripts/serve-static.js",
-    "eslint": "eslint ."
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "format": "prettier --write .",
+    "lint": "ng lint"
   },
+  "private": true,
   "dependencies": {
-    "connect-livereload": "^0.6.1",
-    "eslint": "^9.21.0",
-    "express": "^4.21.2",
-    "livereload": "^0.9.3",
-    "mime-types": "^2.1.35",
-    "node": "^23.9.0",
-    "nodemon": "^3.1.9",
-    "open": "^10.1.0",
-    "prettier": "^3.5.3"
+    "@angular/common": "^19.2.0",
+    "@angular/compiler": "^19.2.0",
+    "@angular/core": "^19.2.0",
+    "@angular/forms": "^19.2.0",
+    "@angular/platform-browser": "^19.2.0",
+    "@angular/platform-browser-dynamic": "^19.2.0",
+    "@angular/router": "^19.2.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.5.3",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^19.2.3",
+    "@angular/cli": "^19.2.3",
+    "@angular/compiler-cli": "^19.2.0",
+    "@types/jasmine": "~5.1.0",
+    "angular-eslint": "19.2.1",
+    "eslint": "^9.22.0",
+    "jasmine-core": "~5.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "8.26.0"
   }
 }

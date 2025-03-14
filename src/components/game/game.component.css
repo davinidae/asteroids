@@ -1,0 +1,11 @@
+.main {
+  width: auto;
+  height: 100%;
+}
+
+.gameCanvas {
+  width: 100%;
+  height: 100%;
+  image-resolution: from-image;
+  image-rendering: auto;
+}

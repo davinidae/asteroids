@@ -1,33 +1,37 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
+// @ts-check
+const eslint = require('@eslint/js');
+const tseslint = require('typescript-eslint');
+const angular = require('angular-eslint');
+const prettier = require('eslint-plugin-prettier/recommended');
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
-  pluginJs.configs.recommended,
+module.exports = tseslint.config(
   {
-    files: ["src/**/*.js"],
-    languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
-      globals: {
-        ...globals.browser,
-      },
-    },
+    files: ['**/*.ts'],
+    extends: [eslint.configs.recommended, ...tseslint.configs.recommended, ...tseslint.configs.stylistic, ...angular.configs.tsRecommended, prettier],
+    plugins: {},
+    processor: angular.processInlineTemplates,
     rules: {
-      "no-undef": "error",
+      '@angular-eslint/directive-selector': [
+        'error',
+        {
+          type: 'attribute',
+          prefix: 'app',
+          style: 'camelCase',
+        },
+      ],
+      '@angular-eslint/component-selector': [
+        'error',
+        {
+          type: 'element',
+          prefix: 'app',
+          style: 'kebab-case',
+        },
+      ],
     },
   },
   {
-    files: ["scripts/**/*.js"],
-    languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
-      globals: {
-        ...globals.node,
-      },
-    },
-    rules: {
-      "no-undef": "error",
-    },
-  },
-];
+    files: ['**/*.html'],
+    extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
+    rules: {},
+  }
+);
