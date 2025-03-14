@@ -13,7 +13,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/asteroids/",
+            "baseHref": "/",
             "cname": "asteroids.davinidae.eu",
             "buildTarget": "asteroids:build:production"
           }
@@ -21,7 +21,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "/asteroids/",
+            "baseHref": "/",
             "outputPath": "dist/asteroids",
             "index": "src/index.html",
             "browser": "src/main.ts",
