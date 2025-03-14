@@ -13,6 +13,8 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
+            "outputPath": "dist/asteroids",
+            "baseHref": "/asteroids/",
             "buildTarget": "asteroids:build:production"
           }
         },
