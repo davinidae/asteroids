@@ -13,14 +13,15 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "outputPath": "dist/asteroids",
             "baseHref": "/asteroids/",
+            "cname": "asteroids.davinidae.eu",
             "buildTarget": "asteroids:build:production"
           }
         },
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/asteroids/",
             "outputPath": "dist/asteroids",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -29,9 +30,11 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "public"
               },
-              "src/sounds"
+              "src/sounds",
+              "src/404.html"
             ],
             "styles": ["src/styles.css"],
             "scripts": []
@@ -83,7 +86,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "public"
               }
             ],
             "styles": ["src/styles.css"],

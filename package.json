@@ -9,7 +9,7 @@
     "test": "ng test",
     "format": "prettier --write .",
     "lint": "ng lint",
-    "deploy": "ng deploy --base-href=/asteroids/"
+    "deploy": "ng deploy --cname='asteroids.davinidae.eu' --base-href='/asteroids/'"
   },
   "private": true,
   "dependencies": {
