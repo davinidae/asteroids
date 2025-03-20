@@ -1,3 +1,3 @@
 # Asteroids
 
-You can play the game [here](https://elpandafriki.github.io/Asteroids-JavaScript/)
+You can play the game [here](https://asteroids.davinidae.eu)
