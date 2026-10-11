@@ -19,7 +19,7 @@
     "@angular/forms": "^22.0.2",
     "@angular/platform-browser": "^22.0.2",
     "@angular/platform-browser-dynamic": "^22.0.2",
-    "@angular/router": "^22.0.2",
+    "@angular/router": "^22.2.0",
     "angular-cli-ghpages": "^3.0.2",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.3",
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^22.1.2",
-    "@angular/cli": "^21.2.22",
+    "@angular/cli": "^21.2.26",
     "@angular/compiler-cli": "^22.1.4",
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "19.2.1",
