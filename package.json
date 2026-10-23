@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^22.1.2",
-    "@angular/cli": "^21.2.26",
+    "@angular/cli": "^21.2.28",
     "@angular/compiler-cli": "^22.1.4",
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "19.2.1",
